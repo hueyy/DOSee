@@ -1,0 +1,8 @@
+{
+  "capture:filename": "bandit-king.png",
+  "zip:path": "dos_programs/program_5/bandit-king.zip",
+  "audio:gus": "false",
+  "width:height": "640, 480",
+  "run:filename": "MAIN.EXE",
+  "utilities": "false"
+}

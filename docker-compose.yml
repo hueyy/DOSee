@@ -16,10 +16,10 @@ services:
     container_name: "dosee_web"
     # nginx stable is used due to its less frequent updates
     # alpine is a tiny linux distribution
-    image: nginx:stable-alpine
+    build: .
     # expose nginx web port 80 as port 8086
     ports:
-      - "8086:80"
+      - "8086:8086"
     volumes:
       # bind your local cloned DOSee repo to nginx's html hosting path
       - type: bind

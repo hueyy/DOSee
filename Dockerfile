@@ -16,6 +16,10 @@
 
 # nginx stable is used due to its less frequent updates
 # alpine is a tiny linux distribution
-FROM nginx:stable-alpine
+FROM node:alpine
 LABEL net.dosee.description="DOSee an MS-DOS emulator for the web"
-COPY src/ /usr/share/nginx/html/
+WORKDIR /usr/src/server
+COPY . .
+RUN npm i && npm run install
+EXPOSE 8086
+CMD ["npm", "run", "serve"]
